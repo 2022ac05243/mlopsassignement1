@@ -1,5 +1,3 @@
-# sample.py
-
 # Module docstring explaining the purpose of the module
 """
 This module contains functions related to number operations.
@@ -12,12 +10,17 @@ def calculate_sum():
     """
     Calculate the sum of numbers.
     """
-    # Redefining 'numbers' from the outer scope
-    numbers = [4, 5, 6]  # avoid redefining variables if not necessary
-    return sum(numbers)
+    # Access the global 'numbers' list directly
+    total_sum = sum(numbers)
+    return total_sum
 
 def calculate_product():
     """
     Calculate the product of numbers.
     """
     return numbers[0] * numbers[1] * numbers[2]
+
+# Example usage
+if __name__ == "__main__":
+    print(f"Sum of numbers: {calculate_sum()}")
+    print(f"Product of numbers: {calculate_product()}")
