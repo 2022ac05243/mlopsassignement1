@@ -1,1 +1,2 @@
 statistics
+pylint==2.12.2
