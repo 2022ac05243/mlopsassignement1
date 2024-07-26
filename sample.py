@@ -4,7 +4,7 @@ This module contains functions related to number operations.
 """
 
 # Global variable example
-numbers = [1, 2, 3]
+numbers = [10.5, 21.5, 35.5]
 
 def calculate_sum():
     """
