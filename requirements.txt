@@ -1,2 +1,11 @@
+pandas
+numpy
+scikit-learn
+mlflow
+dvc
+pyarrow
+joblib
+optuna
+Flask
 statistics
 pylint==2.12.2
