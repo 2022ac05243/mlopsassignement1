@@ -1,1 +1,0 @@
-{"rev": "a1edd007814a15ae8402856625f2dfe566b6f0de", "timestamp": "2024-08-05T19:31:49", "params": {}, "metrics": {}, "deps": {}, "outs": {"data\\insurance.csv": {"hash": "f2d3de5b4cfbee3f18f6dd5791dd1552", "size": 49841, "nfiles": null, "use_cache": true, "is_data_source": true}}, "meta": {}}
