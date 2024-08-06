@@ -25,7 +25,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Linting
-        run: pylint main_pipeline.py
+        run: pylint src/main_pipeline.py
 
       - name: Deploy
-        run: python main_pipeline.py
+        run: python src/main_pipeline.py
