@@ -28,28 +28,28 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd src
-          ls -laR
-          python -m venv venv
-          source venv/bin/activate
+          # cd src
+          # ls -laR
+          # python -m venv venv
+          # source venv/bin/activate
           pip install -r requirements.txt
 
-      # - name: Archive the app
-      #   run: |
-      #     cd src
-      #     zip -r ../app.zip .
+      - name: Archive the app
+        run: |
+          cd src
+          zip -r ../app.zip .
 
-      # - name: Azure Login
-      #   uses: azure/login@v1
-      #   with:
-      #     client-id: "a4a38800-a814-45d7-adbf-0bb617f28c7e"
-      #     tenant-id: "1ba70fdc-d9c6-4e38-bd3f-1bc0a7e104e6"
-      #     subscription-id: "617e0f32-114b-4369-a2af-015ee7987a54"
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          client-id: "a4a38800-a814-45d7-adbf-0bb617f28c7e"
+          tenant-id: "1ba70fdc-d9c6-4e38-bd3f-1bc0a7e104e6"
+          subscription-id: "617e0f32-114b-4369-a2af-015ee7987a54"
 
-      # - name: Deploy to Azure Web App
-      #   uses: azure/webapps-deploy@v2
-      #   with:
-      #     app-name: "mlopsapp" # Replace with your Azure Web App name
-      #     slot-name: "production"
-      #     publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-      #     package: app.zip
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: "mlopsapp" # Replace with your Azure Web App name
+          slot-name: "production"
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: app.zip
