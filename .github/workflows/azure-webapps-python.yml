@@ -1,4 +1,4 @@
-name: Deploy Python app to Azure Web App
+name: Deploy Flask app to Azure Web App
 
 on:
   push:
@@ -27,21 +27,19 @@ jobs:
           python-version: "3.8"
 
       - name: Install dependencies
-      run: |
-        cd src
-        python -m venv venv
-        source venv/bin/activate
-        pip install -r requirements.txt
+        run: |
+          cd src
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
 
-    - name: Archive the app
-      run: |
-        cd src
-        zip -r ../app.zip .
+      - name: Archive the app
+        run: |
+          cd src
+          zip -r ../app.zip .
 
       - name: Azure Login
         uses: azure/login@v1
-        # with:
-        #   creds: ${{ secrets.AZURE_CREDENTIALS }}
         with:
           client-id: "a4a38800-a814-45d7-adbf-0bb617f28c7e"
           tenant-id: "1ba70fdc-d9c6-4e38-bd3f-1bc0a7e104e6"
