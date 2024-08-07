@@ -28,4 +28,4 @@ jobs:
         run: pylint sample.py
 
       - name: Deploy
-        run: python sample.py
+        run: python sample-ml.py
