@@ -46,10 +46,18 @@ jobs:
           tenant-id: "1ba70fdc-d9c6-4e38-bd3f-1bc0a7e104e6"
           subscription-id: "617e0f32-114b-4369-a2af-015ee7987a54"
 
-      - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v2
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          app-name: "mlopsapp" # Replace with your Azure Web App name
-          slot-name: "production"
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: app.zip
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: src
+          server-dir: /site/wwwroot
+      # - name: Deploy to Azure Web App
+      #   uses: azure/webapps-deploy@v2
+      #   with:
+      #     app-name: "mlopsapp" # Replace with your Azure Web App name
+      #     slot-name: "production"
+      #     publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+      #     package: app.zip
