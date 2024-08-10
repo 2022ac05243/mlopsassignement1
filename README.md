@@ -18,7 +18,7 @@ curl -X GET "http://localhost:5000/api/2.0/mlflow/model-versions/get?name=insura
 
 
 Request Body:- 
-curl -X POST http://localhost:5001/predict \
+curl -X POST http://localhost:5002/predict \
     -H "Content-Type: application/json" \
     -d '[
           {"age": 25.0, "bmi": 22.5, "children": 1.0, "sex_female": 0.0, "sex_male": 1.0, "smoker_no": 1.0, "smoker_yes": 0.0, "region_northeast": 0.0, "region_northwest": 1.0, "region_southeast": 0.0, "region_southwest": 0.0},

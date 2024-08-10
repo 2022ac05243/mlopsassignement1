@@ -1,13 +1,12 @@
-FROM python:3.8-slim
+FROM python:3.9-slim
 
-WORKDIR /app
+WORKDIR /C:/Users/manis/Documents/GitHub/MLOPSAssignment1/mlopsassignement1
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY src /app/src
-COPY mlflow-artifacts /app/mlflow-artifacts
-COPY data /app/data
+COPY . /C:/Users/manis/Documents/GitHub/MLOPSAssignment1/mlopsassignement1/
 
+EXPOSE 5002
 
-CMD ["python", "src/app.py"]
+CMD ["python", "app.py"]
