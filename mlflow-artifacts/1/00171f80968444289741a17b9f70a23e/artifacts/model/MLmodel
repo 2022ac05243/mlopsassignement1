@@ -1,0 +1,32 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.19
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.1
+mlflow_version: 2.15.1
+model_size_bytes: 3539866
+model_uuid: 0ea5ae159719477fa01e58024a47b8ea
+run_id: 00171f80968444289741a17b9f70a23e
+signature:
+  inputs: '[{"type": "double", "name": "age", "required": true}, {"type": "double",
+    "name": "bmi", "required": true}, {"type": "double", "name": "children", "required":
+    true}, {"type": "double", "name": "sex_female", "required": true}, {"type": "double",
+    "name": "sex_male", "required": true}, {"type": "double", "name": "smoker_no",
+    "required": true}, {"type": "double", "name": "smoker_yes", "required": true},
+    {"type": "double", "name": "region_northeast", "required": true}, {"type": "double",
+    "name": "region_northwest", "required": true}, {"type": "double", "name": "region_southeast",
+    "required": true}, {"type": "double", "name": "region_southwest", "required":
+    true}]'
+  outputs: '[{"type": "double", "name": "charges", "required": true}]'
+  params: null
+utc_time_created: '2024-08-10 06:02:56.247777'
